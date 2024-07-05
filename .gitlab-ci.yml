@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+  script:
+    - mkdir -p public
+    - cp -r htdocs/* public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
